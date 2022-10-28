@@ -10,9 +10,10 @@ export default function App() {
     <div className="App">
       <div className="container-fluid">
         <div className="card">
-          <Weather />
-          <City />
           <Search />
+          <City />
+
+          <Weather />
         </div>
       </div>
       <Footer />

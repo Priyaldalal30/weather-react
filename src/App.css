@@ -1,13 +1,14 @@
 body {
-  margin: 20px;
+  margin: 30px;
   background-image: url("../public/images/background1.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   color: black;
   font-family: "Concert One", cursive;
   font-weight: 100px;
-  min-height: 550px;
+  min-height: 800px;
 }
 .card {
   border: solid 2px #111924;
