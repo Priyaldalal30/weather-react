@@ -1,0 +1,75 @@
+.description {
+  margin-top: 0px;
+  font-size: 15px;
+  margin-bottom: 0px;
+  color: black;
+  margin-left: 20px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.description::first-letter {
+  text-transform: capitalize;
+}
+
+h5 {
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: lighter;
+  margin-left: 20px;
+  font-weight: 400;
+  font-family: "Recursive", sans-serif;
+}
+
+.active {
+  text-decoration: none;
+  cursor: default;
+  color: black;
+}
+.active:hover {
+  text-decoration: none;
+  color: black;
+}
+.weathericon {
+  position: relative;
+}
+
+.weathericon img {
+  width: 150px;
+  height: 150px;
+}
+
+.details {
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 400px;
+  color: black;
+  font-family: "Recursive", sans-serif;
+}
+.humidity,
+.wind,
+.visibility {
+  margin-left: -27px;
+}
+.unit {
+  margin-left: 0px;
+}
+span {
+  position: relative;
+  right: -30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.high-number {
+  margin-left: -32px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.high,
+.low {
+  margin-left: -5px;
+}
+
+.low-number {
+  margin-left: 0px;
+}
