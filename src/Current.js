@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Current.css";
+import "./Responsive.css";
 
 export default function City() {
   let weatherData = {
@@ -20,8 +21,8 @@ export default function City() {
     feelsLike: "15",
   };
   return (
-    <div className="row">
-      <div className="col-4">
+    <div className="grid">
+      <div className="card1">
         <div className="weathericon">
           <img src={weatherData.imgUrl} alt="weathericon" />
         </div>
@@ -29,7 +30,7 @@ export default function City() {
         <br />
         <div className="description">{weatherData.description2}</div>
       </div>
-      <div className="col-4">
+      <div className="card2">
         <div className="city-card">
           <div className="city">{weatherData.city}</div>
 
@@ -49,7 +50,7 @@ export default function City() {
           </div>
         </div>
       </div>
-      <div className="col-4">
+      <div className="card3">
         <div className="details">
           <br />
           <div className="details1">

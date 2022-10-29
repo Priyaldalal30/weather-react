@@ -1,0 +1,18 @@
+@media (max-width: 540px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-card {
+    margin: auto;
+    margin-top: 40px;
+  }
+  .card1 {
+    display: none;
+  }
+
+  .card3 {
+    margin: auto;
+    text-align: center;
+  }
+}

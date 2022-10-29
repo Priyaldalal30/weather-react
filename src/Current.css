@@ -1,3 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.weathericon img {
+  margin-left: 10px;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  margin-top: 100px;
+}
+.description {
+  margin-left: 25px;
+  margin-top: -25px;
+  font-size: 15px;
+  color: black;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+}
+.description::first-letter {
+  text-transform: capitalize;
+}
 .city-card {
   margin: auto;
   margin-top: 60px;
@@ -53,29 +75,6 @@ h3,
   top: -25px;
 }
 
-.weathericon img {
-  margin-left: 10px;
-  width: 180px;
-  height: 180px;
-  text-align: center;
-  margin-top: 100px;
-}
-.description {
-  margin-left: 25px;
-  margin-top: -25px;
-  font-size: 15px;
-  color: black;
-  font-family: "Recursive", sans-serif;
-  font-weight: 400px;
-}
-.description::first-letter {
-  text-transform: capitalize;
-}
-
-.high-low-temp,
-.sun-time {
-  margin-bottom: 3px;
-}
 .details {
   margin-top: 100px;
   margin-left: 60px;
