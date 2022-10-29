@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
-import Weather from "./Weather";
+import Forecast from "./Forecast";
 import Search from "./Search";
 import Footer from "./Footer";
-import City from "./City";
+import Current from "./Current";
 
 export default function App() {
   return (
@@ -11,9 +11,8 @@ export default function App() {
       <div className="container-fluid">
         <div className="card">
           <Search />
-          <City />
-
-          <Weather />
+          <Current />
+          <Forecast />
         </div>
       </div>
       <Footer />

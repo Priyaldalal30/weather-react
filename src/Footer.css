@@ -1,6 +1,6 @@
 .footer {
-  margin-top: 60px;
-  border-top: 1px solid black;
+  margin-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.359);
   font-family: "Recursive", sans-serif;
 }
 
@@ -9,19 +9,16 @@
   font-size: 25px;
   display: flex;
   justify-content: left;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .coded,
 .links {
-  margin-top: 0px;
   text-align: start;
-  margin-bottom: 12px;
-  line-height: 20px;
 }
 .links {
-  margin-left: -35px;
+  margin-left: -10px;
 }
 
 .netlifyLink,

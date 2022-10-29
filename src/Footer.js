@@ -13,7 +13,7 @@ export default function Footer() {
             href="https://priyal-dalal.netlify.app"
             className="priyal"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Priyal Dalal
           </a>
@@ -21,7 +21,7 @@ export default function Footer() {
           <a
             href="https://app.netlify.com/teams/priyaldalal30/overview"
             className="netlifyLink"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Netlity
@@ -32,7 +32,7 @@ export default function Footer() {
             <a
               href="http://www.linkedin.com/in/priyaldalal30"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="linkedlink"
             >
               <i className="fa-brands fa-linkedin"></i>{" "}
@@ -42,7 +42,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/priyaldalal/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="instalink"
             >
               <i className="fa-brands fa-square-instagram"></i>
@@ -52,7 +52,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/priyal.dalal/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="fblink"
             >
               <i className="fa-brands fa-facebook-f"></i>
@@ -62,7 +62,7 @@ export default function Footer() {
             <a
               href="https://github.com/Priyaldalal30?tab=repositories"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="githublink"
             >
               <i className="fa-brands fa-github"></i>
