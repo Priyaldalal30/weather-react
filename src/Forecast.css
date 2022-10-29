@@ -1,9 +1,6 @@
-.forecast {
-  padding-bottom: 150px;
-}
 .hourly-card,
 .daily-card {
-  padding: 40px;
+  padding: 30px;
   margin: 10px;
-  background-color: rgba(0, 0, 0, 0.329);
+  background-color: rgba(255, 255, 255, 0.329);
 }
