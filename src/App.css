@@ -1,10 +1,10 @@
 body {
-  margin: 30px;
+  margin: 20px;
   position: relative;
   color: black;
   font-family: "Concert One", cursive;
   font-weight: 100px;
-  min-height: 800px;
+  min-height: 700px;
 }
 .card {
   background-image: url("./images/background2.jpg");
@@ -15,4 +15,6 @@ body {
   margin: auto;
   color: black;
   max-width: 800px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.27);
 }
