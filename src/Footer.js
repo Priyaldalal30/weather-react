@@ -15,7 +15,8 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Priyal Dalal
+            {" "}
+            Priyal Dalal{" "}
           </a>
           | Hosted on
           <a
@@ -24,6 +25,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             target="_blank"
           >
+            {" "}
             Netlity
           </a>
         </div>
