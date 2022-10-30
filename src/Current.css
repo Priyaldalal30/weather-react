@@ -20,7 +20,7 @@
 .description::first-letter {
   text-transform: capitalize;
 }
-.city-card {
+.card2 {
   margin: auto;
   margin-top: 60px;
   align-items: center;
@@ -53,15 +53,16 @@
 }
 
 .date {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   font-size: 15px;
   color: black;
   font-family: "Recursive", sans-serif;
   font-weight: 400px;
 }
-h3,
+.currentTemp,
 .units {
+  margin-top: 20px;
   text-align: center;
   font-size: 75px;
   color: black;

@@ -1,18 +1,27 @@
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
   }
-
-  .city-card {
-    margin: auto;
-    margin-top: 40px;
+  .card2 {
+    margin-top: 60px;
+  }
+  .description {
+    margin-top: -18px;
   }
   .card1 {
-    display: none;
+    grid-row: 2;
+    text-align: left;
   }
-
-  .card3 {
-    margin: auto;
-    text-align: center;
+  .weathericon img {
+    width: 100px;
+    height: 100px;
+    text-align: left;
+    margin-top: 50px;
+  }
+  .details {
+    text-align: start;
+    margin: 0px;
+    margin-left: 180px;
+    margin-top: -150px;
   }
 }
