@@ -31,23 +31,20 @@ export default function City() {
         <div className="description">{weatherData.description2}</div>
       </div>
       <div className="card2">
-        <div className="city-card">
-          <div className="city">{weatherData.city}</div>
-
-          <h3>
-            <span>21 </span>
-            <span className="units">
-              <a href="/" className="active">
-                °C
-              </a>{" "}
-              |<a href="/">°F</a>
-            </span>
-          </h3>
-          <div className="date">
-            {weatherData.date}
-            <br />
-            {weatherData.time}
-          </div>
+        <div className="city">{weatherData.city}</div>
+        <div className="currentTemp">
+          <span>21 </span>
+          <span className="units">
+            <a href="/" className="active">
+              °C
+            </a>{" "}
+            |<a href="/">°F</a>
+          </span>
+        </div>
+        <div className="date">
+          {weatherData.date}
+          <br />
+          {weatherData.time}
         </div>
       </div>
       <div className="card3">
