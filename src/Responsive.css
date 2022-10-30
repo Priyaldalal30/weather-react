@@ -1,9 +1,16 @@
 @media (max-width: 700px) {
+  body {
+    margin: 5px;
+  }
+  .card {
+    padding: 10px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
   .card2 {
-    margin-top: 60px;
+    margin-top: 10px;
   }
   .description {
     margin-top: -18px;

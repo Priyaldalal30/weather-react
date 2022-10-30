@@ -26,9 +26,9 @@ export default function City() {
         <div className="weathericon">
           <img src={weatherData.imgUrl} alt="weathericon" />
         </div>
-        <div className="description">{weatherData.description1}</div>
+        <div className="description1">{weatherData.description1}</div>
         <br />
-        <div className="description">{weatherData.description2}</div>
+        <div className="description2">{weatherData.description2}</div>
       </div>
       <div className="card2">
         <div className="city">{weatherData.city}</div>
