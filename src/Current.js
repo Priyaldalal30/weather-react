@@ -14,19 +14,18 @@ export default function Current(props) {
     setWeatherData({
       ready: true,
       city: props.defaultCity,
-      temp: response.data.main.temp,
-      date: new Date(response.data.dt * 1000),
-      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description1: response.data.weather[0].main,
-      description2: response.data.weather[0].description,
-      lowtemp: response.data.main.temp_min,
-      hightemp: response.data.main.temp_min,
+      temp: response.data.temperature.current,
+      date: new Date(response.data.time * 1000),
+      imgUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      description1: response.data.condition.description,
+      lowtemp: "20",
+      hightemp: "16",
       sunrise: "6:30",
       sunset: "19:30",
-      humidity: response.data.main.humidity,
+      humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      visibility: response.data.main.pressure,
-      feelsLike: response.data.main.feels_like,
+      pressure: response.data.temperature.pressure,
+      feelsLike: response.data.temperature.feels_like,
     });
   }
 
@@ -38,8 +37,6 @@ export default function Current(props) {
             <img src={weatherData.imgUrl} alt="weathericon" />
           </div>
           <div className="description1">{weatherData.description1}</div>
-          <br />
-          <div className="description2">{weatherData.description2}</div>
         </div>
         <div className="card2">
           <div className="city">{weatherData.city}</div>
@@ -66,12 +63,12 @@ export default function Current(props) {
 
             <div className="details2">
               <i className="fa-solid fa-wind"></i> Wind:{" "}
-              <span>{weatherData.wind}mph</span>
+              <span>{Math.round(weatherData.wind)} mph</span>
             </div>
 
             <div className="details3">
-              <i className="fa-solid fa-eye"></i> Visibility:{" "}
-              <span>{weatherData.visibility}mi</span>
+              <i class="fa-brands fa-cloudscale"></i> Pressure:{" "}
+              <span>{weatherData.pressure} mi</span>
             </div>
             <div className="details4">
               <i class="fa-solid fa-temperature-quarter"></i> Feels Like:{" "}
@@ -102,8 +99,8 @@ export default function Current(props) {
       </div>
     );
   } else {
-    let apiKey = "de2c40e370d58e257faf07ba4ea95840";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    let apiKey = "0bf5539o2cea5993401bc9ab0afe94t5";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return (
