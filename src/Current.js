@@ -4,26 +4,29 @@ import { Watch } from "react-loader-spinner";
 
 import "./Current.css";
 import "./Responsive.css";
+import CurrentDate from "./CurrentDate";
 
 export default function Current(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
-      city: props.city,
-      date: "Tuesday 25th October",
-      time: "15:30",
-      description1: response.weather.main,
-      description2: response.weather.description,
-      lowtemp: response.main.temp_min,
-      hightemp: response.main.temp_min,
+      city: props.defaultCity,
+      temp: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
+      imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description1: response.data.weather[0].main,
+      description2: response.data.weather[0].description,
+      lowtemp: response.data.main.temp_min,
+      hightemp: response.data.main.temp_min,
       sunrise: "6:30",
       sunset: "19:30",
-      humidity: response.main.humidity,
-      wind: response.wind.speed,
-      visibility: response.main.pressure,
-      feelsLike: response.main.feels_like,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      visibility: response.data.main.pressure,
+      feelsLike: response.data.main.feels_like,
     });
   }
 
@@ -41,7 +44,7 @@ export default function Current(props) {
         <div className="card2">
           <div className="city">{weatherData.city}</div>
           <div className="currentTemp">
-            <span>21 </span>
+            <span>{Math.round(weatherData.temp)} </span>
             <span className="units">
               <a href="/" className="active">
                 °C
@@ -50,9 +53,7 @@ export default function Current(props) {
             </span>
           </div>
           <div className="date">
-            {weatherData.date}
-            <br />
-            {weatherData.time}
+            <CurrentDate date={weatherData.date} />
           </div>
         </div>
         <div className="card3">
@@ -74,17 +75,17 @@ export default function Current(props) {
             </div>
             <div className="details4">
               <i class="fa-solid fa-temperature-quarter"></i> Feels Like:{" "}
-              <span>{weatherData.feelsLike}°C</span>
+              <span>{Math.round(weatherData.feelsLike)}°C</span>
             </div>
 
             <div className="details5">
               <i class="fa-solid fa-temperature-high"></i> High:{" "}
-              <span>{weatherData.hightemp}°C</span>
+              <span>{Math.round(weatherData.hightemp)}°C</span>
             </div>
 
             <div className="details6">
               <i class="fa-solid fa-temperature-low"></i> Low:{" "}
-              <span>{weatherData.lowtemp}°C</span>
+              <span>{Math.round(weatherData.lowtemp)}°C</span>
             </div>
 
             <div className="details7">
@@ -102,8 +103,7 @@ export default function Current(props) {
     );
   } else {
     let apiKey = "de2c40e370d58e257faf07ba4ea95840";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=woking&appid=${apiKey}&units=metric;
-`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return (

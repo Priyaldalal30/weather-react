@@ -1,4 +1,4 @@
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   body {
     margin: 5px;
   }
@@ -12,23 +12,33 @@
   .card2 {
     margin-top: 10px;
   }
-  .description {
-    margin-top: -18px;
+  .description1 {
+    margin-top: -40px;
+    margin-left: 40px;
+  }
+  .description2 {
+    margin-top: -20px;
+    margin-left: 40px;
   }
   .card1 {
     grid-row: 2;
     text-align: left;
   }
   .weathericon img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     text-align: left;
     margin-top: 50px;
   }
   .details {
     text-align: start;
     margin: 0px;
-    margin-left: 180px;
+    margin-left: 300px;
     margin-top: -150px;
+  }
+}
+@media (max-width: 500px) {
+  .details {
+    margin-left: 200px;
   }
 }

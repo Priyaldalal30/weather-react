@@ -4,15 +4,14 @@
 }
 .weathericon img {
   margin-left: 10px;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   text-align: center;
   margin-top: 100px;
 }
-.description1,
-.description2 {
-  margin-left: 25px;
-  margin-top: -25px;
+.description1 {
+  margin-left: 55px;
+  margin-top: -55px;
   padding: 2px;
   font-size: 15px;
   color: black;
@@ -20,7 +19,13 @@
   font-weight: 400px;
 }
 .description2 {
-  padding-top: 7px;
+  margin-left: 55px;
+  margin-top: -20px;
+  padding: 2px;
+  font-size: 15px;
+  color: black;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
 }
 .description1::first-letter,
 .description2::first-letter {
