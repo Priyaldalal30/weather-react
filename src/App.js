@@ -11,7 +11,7 @@ export default function App() {
       <div className="container-fluid">
         <div className="card">
           <Search />
-          <Current />
+          <Current defaultCity="Woking" />
           <Forecast />
         </div>
       </div>
