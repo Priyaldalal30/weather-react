@@ -1,0 +1,18 @@
+.hourly-card,
+.daily-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 9px;
+}
+.card-day-1,
+.card-day-2,
+.card-day-3,
+.card-day-4,
+.card-day-5,
+.card-day-6 {
+  border: 1px solid rgba(255, 255, 255, 0.329);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.329);
+  text-align: center;
+  padding-bottom: 60px;
+}
