@@ -17,12 +17,12 @@ export default function Weather() {
       </div>
       <br />
       <div className="daily-grid">
-        <div className="card-day-1">Monday </div>
-        <div className="card-day-2">Tuesday </div>
-        <div className="card-day-3">Wednesday </div>
-        <div className="card-day-4">Thursday </div>
-        <div className="card-day-5">Friday </div>
-        <div className="card-day-6">Saturday </div>
+        <div className="card-day-1">Mon </div>
+        <div className="card-day-2">Tue </div>
+        <div className="card-day-3">Wed </div>
+        <div className="card-day-4">Thu </div>
+        <div className="card-day-5">Fri </div>
+        <div className="card-day-6">Sat </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
 import TemperatureUnit from "./TemperatureUnit";
 
-import "./Weather.css";
+import "./CurrentWeather.css";
 import WeatherIcon from "./WeatherIcon";
 
 export default function CurrentWeather(props) {

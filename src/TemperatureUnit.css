@@ -1,0 +1,22 @@
+.currentTemp,
+.units {
+  text-align: center;
+  font-size: 100px;
+  color: black;
+}
+.units {
+  font-size: 17px;
+  margin-left: -40px;
+  font-family: "Recursive", sans-serif;
+  font-weight: 400px;
+  position: relative;
+  top: -55px;
+}
+.active {
+  text-decoration: underline;
+  color: black;
+}
+.active:hover {
+  color: black;
+  cursor: pointer;
+}
