@@ -21,25 +21,25 @@ export default function Weather(props) {
     console.log(forecastDay);
     return (
       <div className="daily-grid">
-        <div>
+        <div className="day1">
           <DailyForecastDay data={forecastDay[1]} />
         </div>
-        <div>
+        <div className="day2">
           <DailyForecastDay data={forecastDay[2]} />
         </div>
-        <div>
+        <div className="day3">
           <DailyForecastDay data={forecastDay[3]} />
         </div>
-        <div>
+        <div className="day4">
           <DailyForecastDay data={forecastDay[4]} />
         </div>
-        <div>
+        <div className="day5">
           <DailyForecastDay data={forecastDay[5]} />
         </div>
-        <div>
+        <div className="day6">
           <DailyForecastDay data={forecastDay[6]} />
         </div>
-        <div>
+        <div className="day7">
           <DailyForecastDay data={forecastDay[7]} />
         </div>
       </div>
