@@ -41,6 +41,8 @@
   }
   .daily-grid {
     grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    column-gap: 5px;
   }
 }
 @media (max-width: 500px) {

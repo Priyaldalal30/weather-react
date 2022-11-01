@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   column-gap: 9px;
   color: rgba(247, 243, 243, 0.655);
   font-family: "Recursive", sans-serif;
