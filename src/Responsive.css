@@ -36,13 +36,21 @@
   }
   .day5,
   .day6,
-  .day7 {
+  .day7,
+  .hourly-grid8,
+  .hourly-grid9,
+  .hourly-grid10,
+  .hourly-grid11,
+  .hourly-grid12 {
     display: none;
   }
   .daily-grid {
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
     column-gap: 5px;
+  }
+  .hourly-grid {
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 @media (max-width: 500px) {

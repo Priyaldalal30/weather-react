@@ -1,0 +1,13 @@
+.hourly-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 50px;
+  column-gap: 4px;
+  color: rgba(247, 243, 243, 0.655);
+  font-family: "Recursive", sans-serif;
+}
+
+.card-hour-1 {
+  text-align: center;
+  margin: auto;
+}

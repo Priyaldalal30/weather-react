@@ -6,19 +6,18 @@ import "./DailyForecast.css";
 
 export default function Weather(props) {
   const [loaded, setLoaded] = useState(false);
-  const [forecastDay, setForecastDate] = useState(null);
+  const [forecastDay, setForecastDay] = useState(null);
 
   useEffect(() => {
     setLoaded(false);
   }, [props.coordinates]);
 
   function showDailyForecast(response) {
-    setForecastDate(response.data.daily);
+    setForecastDay(response.data.daily);
     setLoaded(true);
   }
 
   if (loaded) {
-    console.log(forecastDay);
     return (
       <div className="daily-grid">
         <div className="day1">
@@ -45,7 +44,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+    let apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
     let latitude = props.coordinates.coordinates.lat;
     let longitude = props.coordinates.coordinates.lon;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;

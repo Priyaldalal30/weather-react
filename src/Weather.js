@@ -3,6 +3,7 @@ import axios from "axios";
 import { Watch } from "react-loader-spinner";
 import CurrentWeather from "./CurrentWeather";
 import DailyForecast from "./DailyForecast";
+import HourlyForecast from "./HourlyForecast";
 
 import "./Weather.css";
 import "./Responsive.css";
@@ -40,7 +41,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function search() {
-    const apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
+    const apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -68,6 +69,7 @@ export default function Weather(props) {
           </form>
         </span>
         <CurrentWeather data={weatherData} />
+        <HourlyForecast coordinates={weatherData} />
         <DailyForecast coordinates={weatherData} />
       </div>
     );
