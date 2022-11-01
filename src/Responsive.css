@@ -34,6 +34,14 @@
     margin-left: 300px;
     margin-top: -160px;
   }
+  .day5,
+  .day6,
+  .day7 {
+    display: none;
+  }
+  .daily-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (max-width: 500px) {
   .details {
