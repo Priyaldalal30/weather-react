@@ -2,6 +2,7 @@ import React from "react";
 import CurrentDate from "./CurrentDate";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+import TemperatureUnit from "./TemperatureUnit";
 
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
@@ -18,17 +19,8 @@ export default function CurrentWeather(props) {
           <div className="description2">{props.data.description2}</div>
         </div>
         <div className="card2">
-          <div className="currentTemp">
-            <span>{Math.round(props.data.temp)} </span>
-            <span className="units">
-              <a href="/" className="active">
-                °C
-              </a>{" "}
-              |<a href="/">°F</a>
-            </span>
-          </div>
+          <TemperatureUnit tempUnit={props.data.temp} />
           <div className="city">{props.data.city}</div>
-
           <div className="date">
             <CurrentDate date={props.data.date} />
           </div>

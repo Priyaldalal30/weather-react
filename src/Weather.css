@@ -78,13 +78,12 @@ input:hover {
   color: black;
 }
 .active {
-  text-decoration: none;
-  cursor: default;
+  text-decoration: underline;
   color: black;
 }
 .active:hover {
-  text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 .date {
