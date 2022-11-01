@@ -13,7 +13,11 @@ export default function CurrentWeather(props) {
       <div className="grid">
         <div className="card1">
           <div className="weathericon">
-            <WeatherIcon code={props.data.icon} alt="props.data.icon" />
+            <WeatherIcon
+              code={props.data.icon}
+              alt="props.data.icon"
+              size={90}
+            />
           </div>
           <div className="description1">{props.data.description1}</div>
           <div className="description2">{props.data.description2}</div>

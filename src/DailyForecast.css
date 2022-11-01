@@ -1,0 +1,21 @@
+.daily-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  column-gap: 9px;
+  color: rgba(247, 243, 243, 0.655);
+  font-family: "Recursive", sans-serif;
+}
+
+.card-day-1 {
+  border-radius: 5px;
+  background-color: #243b0a76;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+}
+.forecast-low-temp {
+  margin-left: 10px;
+  font-weight: lighter;
+}

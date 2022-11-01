@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Watch } from "react-loader-spinner";
 import CurrentWeather from "./CurrentWeather";
+import DailyForecast from "./DailyForecast";
 
 import "./Weather.css";
 import "./Responsive.css";
@@ -13,6 +14,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       temp: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -66,6 +68,7 @@ export default function Weather(props) {
           </form>
         </span>
         <CurrentWeather data={weatherData} />
+        <DailyForecast coordinates={weatherData} />
       </div>
     );
   } else {

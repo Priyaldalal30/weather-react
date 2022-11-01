@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import Forecast from "./Forecast";
 import Footer from "./Footer";
 import Weather from "./Weather";
 
@@ -10,7 +9,6 @@ export default function App() {
       <div className="container-fluid">
         <div className="card">
           <Weather defaultCity="Woking" />
-          <Forecast />
         </div>
       </div>
       <Footer />
