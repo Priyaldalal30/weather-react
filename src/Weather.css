@@ -1,17 +1,40 @@
+button,
+input {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: 20px;
+  color: black;
+}
+input {
+  background-color: rgba(255, 255, 255, 0.273);
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  color: black;
+}
+.search-form {
+  display: flex;
+  justify-content: flex-start;
+}
+button:hover {
+  cursor: pointer;
+}
+input:hover {
+  cursor: text;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.weathericon img {
-  margin-left: 10px;
-  width: 200px;
-  height: 200px;
+.weathericon canvas {
+  margin-left: 40px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .description1 {
-  margin-left: 55px;
-  margin-top: -55px;
+  margin-left: 40px;
+  margin-top: 0px;
   padding: 2px;
   font-size: 15px;
   color: black;
@@ -19,14 +42,15 @@
   font-weight: 400px;
 }
 .description2 {
-  margin-left: 55px;
-  margin-top: -20px;
+  margin-left: 40px;
+  margin-top: 0px;
   padding: 2px;
   font-size: 15px;
   color: black;
   font-family: "Recursive", sans-serif;
   font-weight: 400px;
 }
+
 .description1::first-letter,
 .description2::first-letter {
   text-transform: capitalize;
@@ -47,7 +71,7 @@
   border-radius: 50%;
 }
 .city {
-  padding-top: 10px;
+  padding-top: 21px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
