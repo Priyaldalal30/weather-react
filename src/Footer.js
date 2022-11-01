@@ -62,7 +62,7 @@ export default function Footer() {
           </span>
           <span className="github">
             <a
-              href="https://github.com/Priyaldalal30?tab=repositories"
+              href="https://github.com/Priyaldalal30/weather-react"
               target="_blank"
               rel="noopener noreferrer"
               className="githublink"
