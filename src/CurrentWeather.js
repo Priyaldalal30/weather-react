@@ -18,7 +18,6 @@ export default function CurrentWeather(props) {
           <div className="description2">{props.data.description2}</div>
         </div>
         <div className="card2">
-          <div className="city">{props.data.city}</div>
           <div className="currentTemp">
             <span>{Math.round(props.data.temp)} </span>
             <span className="units">
@@ -28,6 +27,8 @@ export default function CurrentWeather(props) {
               |<a href="/">°F</a>
             </span>
           </div>
+          <div className="city">{props.data.city}</div>
+
           <div className="date">
             <CurrentDate date={props.data.date} />
           </div>
