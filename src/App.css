@@ -5,6 +5,7 @@ body {
   font-family: "Concert One", cursive;
   font-weight: 100px;
   min-height: 700px;
+  background-image: linear-gradient(to bottom, #b0acaa82 0%, #293b08b8 100%);
 }
 .card {
   background-image: url("./images/background2.jpg");

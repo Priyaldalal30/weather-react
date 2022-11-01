@@ -32,11 +32,11 @@
     text-align: start;
     margin: 0px;
     margin-left: 300px;
-    margin-top: -150px;
+    margin-top: -160px;
   }
 }
 @media (max-width: 500px) {
   .details {
-    margin-left: 300px;
+    margin-left: 200px;
   }
 }
