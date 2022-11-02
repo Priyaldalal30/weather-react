@@ -32,18 +32,34 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
     });
   }
+  function search() {
+    const apiKey = "5354b60afda2b7800186c06153932396";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
+
     search();
   }
   function handleCityChange(event) {
+    event.preventDefault();
+
     setCity(event.target.value);
   }
-  function search() {
-    const apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  function currentLocation(location) {
+    const apiKey = "5354b60afda2b7800186c06153932396";
+    let latitude = location.coords.latitude;
+    let longitude = location.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(currentLocation);
   }
 
   if (weatherData.ready) {
@@ -63,8 +79,8 @@ export default function Weather(props) {
               <i class="fa-solid fa-magnifying-glass-location"></i>
             </button>
 
-            <button className="location" role="img">
-              <i class="fa-solid fa-location-dot"></i>
+            <button className="location" role="img" onClick={getLocation}>
+              <i class="fa-solid fa-location-dot" />
             </button>
           </form>
         </span>
