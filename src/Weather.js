@@ -33,7 +33,7 @@ export default function Weather(props) {
     });
   }
   function search() {
-    const apiKey = "5354b60afda2b7800186c06153932396";
+    const apiKey = "1dbf926d3b4417bf379db7043bec1047";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -50,7 +50,7 @@ export default function Weather(props) {
   }
 
   function currentLocation(location) {
-    const apiKey = "5354b60afda2b7800186c06153932396";
+    const apiKey = "1dbf926d3b4417bf379db7043bec1047";
     let latitude = location.coords.latitude;
     let longitude = location.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -68,10 +68,10 @@ export default function Weather(props) {
         <span>
           <form className="search-form" onSubmit={handleSubmit}>
             <input
+              spellCheck="true"
               type="search"
               placeholder="Search City"
               className="city-input"
-              autoFocus="on"
               onChange={handleCityChange}
             />
 
@@ -86,6 +86,7 @@ export default function Weather(props) {
         </span>
         <CurrentWeather data={weatherData} />
         <HourlyForecast coordinates={weatherData} />
+        <hr />
         <DailyForecast coordinates={weatherData} />
       </div>
     );

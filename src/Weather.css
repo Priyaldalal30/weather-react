@@ -25,3 +25,8 @@ input:hover {
 .location {
   padding: 0px;
 }
+hr {
+  height: 1px;
+  background-color: rgba(204, 204, 204, 0.228);
+  border: none;
+}

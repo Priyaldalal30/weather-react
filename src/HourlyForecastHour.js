@@ -5,7 +5,7 @@ export default function HourlyForecastHour(props) {
   function time() {
     let date = new Date(props.data.dt * 1000);
     let hour = date.getHours();
-    return hour;
+    return <div>{hour}:00</div>;
   }
 
   return (

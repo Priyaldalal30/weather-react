@@ -2,9 +2,12 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin-top: 50px;
+  margin-bottom: 20px;
   column-gap: 4px;
   color: rgba(247, 243, 243, 0.655);
   font-family: "Recursive", sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
 }
 
 .card-hour-1 {
