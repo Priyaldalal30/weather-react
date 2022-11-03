@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Watch } from "react-loader-spinner";
 
@@ -15,35 +15,32 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [background, setBackground] = useState("");
 
-  useEffect(() => {
-    const weatherCondition = props.code;
-
+  function changeBackground(weatherCondition) {
     if (weatherCondition === "01d" || weatherCondition === "01n") {
       setBackground("bg-clear-sky");
     }
 
-    if (
-      weatherCondition === "02d" ||
-      weatherCondition === "04d" ||
-      weatherCondition === "02d" ||
-      weatherCondition === "04d"
-    ) {
+    if (weatherCondition === "02d" || weatherCondition === "02d") {
       setBackground("bg-partly-cloudy");
     }
-
     if (weatherCondition === "03d" || weatherCondition === "03n") {
       setBackground("bg-cloudy");
+    }
+    if (weatherCondition === "04d" || weatherCondition === "04d") {
+      setBackground("bg-overcast");
     }
 
     if (
       weatherCondition === "09d" ||
       weatherCondition === "10d" ||
-      weatherCondition === "11d" ||
       weatherCondition === "09n" ||
-      weatherCondition === "10n" ||
-      weatherCondition === "11n"
+      weatherCondition === "10n"
     ) {
-      setBackground(".bg-rain");
+      setBackground("bg-rain");
+    }
+
+    if (weatherCondition === "11d" || weatherCondition === "11n") {
+      setBackground("bg-thunderstrom");
     }
 
     if (weatherCondition === "13d" || weatherCondition === "13n") {
@@ -53,9 +50,10 @@ export default function Weather(props) {
     if (weatherCondition === "50d" || weatherCondition === "50n") {
       setBackground("bg-fog");
     }
-  }, []);
+  }
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -74,6 +72,7 @@ export default function Weather(props) {
       pressure: response.data.main.pressure,
       feelsLike: response.data.main.feels_like,
     });
+    changeBackground(response.data.weather[0].icon);
   }
 
   function search() {
@@ -108,8 +107,8 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="WeatherApp">
-        <div className={`App ${background}`} id="container">
+      <div className={`weather-app ${background}`} id="container">
+        <div>
           <span>
             <form className="search-form" onSubmit={handleSubmit}>
               <input

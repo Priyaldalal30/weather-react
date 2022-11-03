@@ -3,9 +3,8 @@
   grid-template-columns: repeat(7, 1fr);
   margin-top: 10px;
   column-gap: 9px;
-  color: rgba(247, 243, 243, 0.655);
+  color: black;
   font-family: "Recursive", sans-serif;
-  font-weight: lighter;
   font-size: 13px;
 }
 
@@ -16,8 +15,7 @@
   margin: auto;
 }
 .forecast-low-temp {
-  margin-left: 10px;
-  font-weight: lighter;
+  margin-left: 5px;
 }
 .forecast-day {
   margin-bottom: 5px;

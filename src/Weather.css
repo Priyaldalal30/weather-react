@@ -1,27 +1,17 @@
-.App #container {
-  font-family: "Poppins", sans-serif;
-  max-width: 800px;
-  margin: 15px auto;
-  padding: 10px;
-  padding-bottom: 20px;
-  border-width: 1;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
 button,
 input {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 20px;
-  color: black;
 }
 input {
-  background-color: rgba(255, 255, 255, 0.273);
+  background-color: rgba(255, 255, 255, 0.245);
   border-radius: 5px;
   width: 250px;
   height: 30px;
-  color: black;
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.628);
 }
 .search-form {
   display: flex;
@@ -41,19 +31,68 @@ hr {
   background-color: rgba(204, 204, 204, 0.228);
   border: none;
 }
-.bg-clear-sky {
-  background-image: url("./images/Clearsky.jpg");
-}
-.bg-cloudy {
-  background-image: url("./images/Cloudy.jpg");
-}
-.bg-partly-cloudy {
-  background-image: url("./images/partly-cloudy.jpg");
+
+#container {
+  padding: 10px;
+  margin: auto;
+  max-width: 800px;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.27);
 }
 
+.bg-clear-sky {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Clear-sky.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-cloudy {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Cloudy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-partly-cloudy {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Partly-cloudy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-overcast {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Overcast.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .bg-rain {
-  background-image: url("./images/Rain.jpg");
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Rain.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-thunderstrom {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Thunderstorm.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .bg-snow {
-  background-image: url("./images/Snow.jpg");
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Snow.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-fog {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/Fog.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
