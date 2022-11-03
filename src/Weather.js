@@ -1,16 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Watch } from "react-loader-spinner";
+
 import CurrentWeather from "./CurrentWeather";
 import DailyForecast from "./DailyForecast";
 import HourlyForecast from "./HourlyForecast";
 
 import "./Weather.css";
 import "./Responsive.css";
+import "./App.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [background, setBackground] = useState("");
+
+  useEffect(() => {
+    const weatherCondition = props.code;
+
+    if (weatherCondition === "01d" || weatherCondition === "01n") {
+      setBackground("bg-clear-sky");
+    }
+
+    if (
+      weatherCondition === "02d" ||
+      weatherCondition === "04d" ||
+      weatherCondition === "02d" ||
+      weatherCondition === "04d"
+    ) {
+      setBackground("bg-partly-cloudy");
+    }
+
+    if (weatherCondition === "03d" || weatherCondition === "03n") {
+      setBackground("bg-cloudy");
+    }
+
+    if (
+      weatherCondition === "09d" ||
+      weatherCondition === "10d" ||
+      weatherCondition === "11d" ||
+      weatherCondition === "09n" ||
+      weatherCondition === "10n" ||
+      weatherCondition === "11n"
+    ) {
+      setBackground(".bg-rain");
+    }
+
+    if (weatherCondition === "13d" || weatherCondition === "13n") {
+      setBackground("bg-snow");
+    }
+
+    if (weatherCondition === "50d" || weatherCondition === "50n") {
+      setBackground("bg-fog");
+    }
+  }, []);
 
   function handleResponse(response) {
     setWeatherData({
@@ -32,6 +75,7 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
     });
   }
+
   function search() {
     const apiKey = "1dbf926d3b4417bf379db7043bec1047";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -64,30 +108,32 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="weatherApp">
-        <span>
-          <form className="search-form" onSubmit={handleSubmit}>
-            <input
-              spellCheck="true"
-              type="search"
-              placeholder="Search City"
-              className="city-input"
-              onChange={handleCityChange}
-            />
+      <div className="WeatherApp">
+        <div className={`App ${background}`} id="container">
+          <span>
+            <form className="search-form" onSubmit={handleSubmit}>
+              <input
+                spellCheck="true"
+                type="search"
+                placeholder="Search City"
+                className="city-input"
+                onChange={handleCityChange}
+              />
 
-            <button className="search" role="img">
-              <i class="fa-solid fa-magnifying-glass-location"></i>
-            </button>
+              <button className="search" role="img">
+                <i class="fa-solid fa-magnifying-glass-location"></i>
+              </button>
 
-            <button className="location" role="img" onClick={getLocation}>
-              <i class="fa-solid fa-location-dot" />
-            </button>
-          </form>
-        </span>
-        <CurrentWeather data={weatherData} />
-        <HourlyForecast coordinates={weatherData} />
-        <hr />
-        <DailyForecast coordinates={weatherData} />
+              <button className="location" role="img" onClick={getLocation}>
+                <i class="fa-solid fa-location-dot" />
+              </button>
+            </form>
+          </span>
+          <CurrentWeather data={weatherData} />
+          <HourlyForecast coordinates={weatherData} />
+          <hr />
+          <DailyForecast coordinates={weatherData} />
+        </div>
       </div>
     );
   } else {

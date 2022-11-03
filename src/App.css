@@ -7,15 +7,25 @@ body {
   min-height: 700px;
   background-image: linear-gradient(to bottom, #b0acaa82 0%, #293b08b8 100%);
 }
-.card {
-  background-image: url("./images/background2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.App #container {
   padding: 10px;
   margin: auto;
   color: black;
   max-width: 800px;
   border-radius: 5px;
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.27);
+}
+
+.bg-winter {
+  background: linear-gradient(#e1f2fb, #f7f7f7);
+}
+.bg-spring {
+  background: linear-gradient(#4ef037, #f7f7f7);
+}
+.bg-summer {
+  background: linear-gradient(#ffe700, #f7f7f7);
+}
+
+.bg-autumn {
+  background: linear-gradient(#ffc93c, #f7f7f7);
 }

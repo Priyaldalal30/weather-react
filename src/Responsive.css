@@ -26,13 +26,13 @@
     width: 100px;
     height: 100px;
     text-align: left;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   .details {
     text-align: start;
     margin: 0px;
     margin-left: 300px;
-    margin-top: -160px;
+    margin-top: -175px;
   }
   .day5,
   .day6,
@@ -56,5 +56,8 @@
 @media (max-width: 500px) {
   .details {
     margin-left: 200px;
+  }
+  .forecast-low-temp {
+    margin-left: 0px;
   }
 }
