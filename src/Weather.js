@@ -107,6 +107,14 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className={`weather-app ${background}`} id="container">
+        <a
+          href="https://weather-react-pd.netlify.app"
+          className="celsiusLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View in Fahrenheit
+        </a>
         <div>
           <span>
             <form className="search-form" onSubmit={handleSubmit}>
