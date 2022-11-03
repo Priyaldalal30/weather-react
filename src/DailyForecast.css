@@ -3,7 +3,6 @@
   grid-template-columns: repeat(7, 1fr);
   margin-top: 10px;
   column-gap: 9px;
-  color: black;
   font-family: "Recursive", sans-serif;
   font-size: 13px;
 }

@@ -34,15 +34,16 @@
   margin-top: 60px;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(180deg, #ffffff18 30%, #ffffff18 100%);
-  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.175) inset;
-  width: 350px;
-  height: 350px;
+  background-image: linear-gradient(180deg, #15151518 30%, #23222218 100%);
+  box-shadow: 0 0 4px 4px rgba(113, 108, 108, 0.202) inset;
+  width: 370px;
+  height: 370px;
   border-radius: 50%;
 }
 .city {
   text-align: center;
   font-size: 70px;
+  margin-top: -60px;
 }
 
 .date {
