@@ -53,14 +53,14 @@ hr {
 
 .bg-clear-sky {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/clear-sky.jpg");
+    url("./images/clearsky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-partly-cloudy {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/partly-cloudy.jpg");
+    url("./images/partlycloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
