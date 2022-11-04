@@ -108,7 +108,7 @@ export default function Weather(props) {
     return (
       <div className={`weather-app ${background}`} id="container">
         <a
-          href="https://weather-react-pd.netlify.app"
+          href="https://weather-freact-pd.netlify.app"
           className="celsiusLink"
           target="_blank"
           rel="noopener noreferrer"

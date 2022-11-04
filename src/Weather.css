@@ -50,56 +50,56 @@ hr {
 
 .bg-clear-sky {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Clear-sky.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.bg-cloudy {
-  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Cloudy.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-partly-cloudy {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Partly-cloudy.jpg");
+    url("./images/partly-cloudy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-cloudy {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-overcast {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Overcast.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-rain {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Rain.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-thunderstrom {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Thunderstorm.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-snow {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Snow.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-fog {
   background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
-    url("./images/Fog.jpg");
+    url("./images/partly-cloudy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
