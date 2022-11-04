@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 2fr 1fr;
 }
 .weathericon canvas {
-  margin-left: 40px;
+  margin-left: 25px;
   text-align: center;
   margin-top: 150px;
 }

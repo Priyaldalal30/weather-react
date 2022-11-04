@@ -5,6 +5,9 @@
   display: flex;
   justify-content: flex-end;
 }
+.celsiusLink:hover {
+  text-decoration: underline;
+}
 
 button,
 input {
