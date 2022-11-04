@@ -107,12 +107,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className={`weather-app ${background}`} id="container">
-        <a
-          href="https://weather-freact-pd.netlify.app"
-          className="celsiusLink"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://weather-freact-pd.netlify.app" className="celsiusLink">
           View in Fahrenheit
         </a>
         <div>
