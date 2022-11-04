@@ -100,3 +100,10 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-thunderstorm {
+  background-image: linear-gradient(180deg, #ffffff50 100%, #ffffff50 100%),
+    url("./images/thunderstorm.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
